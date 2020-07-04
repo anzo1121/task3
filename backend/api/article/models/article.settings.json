@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "URL": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    },
+    "likes": {
+      "type": "biginteger",
+      "required": false,
+      "min": "0",
+      "default": "0"
+    }
+  }
+}
